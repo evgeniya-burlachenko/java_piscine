@@ -13,17 +13,16 @@ public class Program {
         long remainder = 1;
 
         for (int j = 1; j < countOfWeek - 1; ++j)
-            remainder = remainder * 10;//здесь будет самое бульшое число  - максимум с 18 нулями
+            remainder = remainder * 10;//здесь будет самое большое число  - максимум с 18 нулями
 
         while (i < countOfWeek) {
-            long sign = res / remainder; //разбиваем res на десятки сотни и тд 1 2 3 4 5 6
+            //разбиваю res на десятки сотни и тд 1 2 3 4 5 6
+            long sign = res / remainder;
             System.out.print("Week " + i + " ");
             for (int j = 0; j < sign; ++j)
                 System.out.print("=");//столько = сколько res
             System.out.println(">");
             res = res - sign * remainder; //сокращаю res на первую цифру
-            System.out.println("res");
-            System.out.println(res);
             remainder /= 10;// убираю 1 ноль и запускаю цикл опять
             i++;
         }
@@ -38,15 +37,16 @@ public class Program {
 
         while (countOfWeek <= 18) {
             String s = scanner.next();
-            if ("42".equals(s) == true) {
+            if ("42".equals(s)) {
                 printDiagram(countOfWeek, resultArray);
                 System.exit(0);
             }
             //проверка week #
-            if ("Week".equals(s) == false) {
+            if (!"Week".equals(s)) {
                 ErrorExit(scanner);
             }
-            if (!scanner.hasNextInt()) { //проверка что после week точно int
+            //проверка что после week точно int
+            if (!scanner.hasNextInt()) {
                 ErrorExit(scanner);
             }
             int tmp = scanner.nextInt();
