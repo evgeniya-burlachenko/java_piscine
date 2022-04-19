@@ -66,7 +66,6 @@ public class Program {
                 else {
                     if ( minNum > inputNum ) { //таким образом сюжа попадает только 1 grade - самый маленький
                         minNum = inputNum;
-                        //minNum = (minNum < inputNum) ? minNum: inputNum;
                     }
                 }
                 countOfGrade++;
