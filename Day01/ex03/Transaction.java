@@ -1,17 +1,19 @@
-package ex00;
+package ex03;
+
 import java.util.UUID;
 
 enum Category {
     debit,
     credit
 }
-public class Transaction {
 
+public class Transaction {
     private UUID Identifier;
     private User Recipient;
     private User Sender;
     private Category TransferCategory;
     private int TransferAmount;
+
 
     public Transaction(User recipient, User sender, Category transferCategory, int transferAmount) {
         Identifier = UUID.randomUUID();
@@ -30,6 +32,8 @@ public class Transaction {
             sender.setBalance(sender.getBalance() - transferAmount);
             recipient.setBalance(recipient.getBalance() + transferAmount);
         }
+        recipient.getTransactionsList().addTransaction(this);
+        sender.getTransactionsList().addTransaction(this);
         this.TransferAmount = transferAmount;
     }
 
@@ -69,14 +73,29 @@ public class Transaction {
         return TransferAmount;
     }
 
-    public void setTransferAmount(int transferAmount) {
-        if (TransferCategory == Category.debit && transferAmount < 0) {
-            System.out.println("Debit (incoming transaction) can't be negative, set to 0 by default");
-            TransferAmount = 0;
-        } else if (TransferCategory == Category.credit && transferAmount > 0) {
-            System.out.println("Credit (outgoing transaction) can't be positive, set 0 by default");
-            TransferAmount = 0;
-        } else
-            TransferAmount = transferAmount;
-    }
+
+//    public void setTransferAmount(int transferAmount) {
+//        if (TransferCategory == Category.debit && transferAmount < 0) {
+//            System.out.println("Debit (incoming transaction) can't be negative, set to 0 by default");
+//            TransferAmount = 0;
+//        } else if (TransferCategory == Category.credit && transferAmount > 0) {
+//            System.out.println("Credit (outgoing transaction) can't be positive, set 0 by default");
+//            TransferAmount = 0;
+//        } else
+//            TransferAmount = transferAmount;
+//    }
+//
+//    public void printTransaction() {
+//        if (TransferCategory == Category.credit) {
+//            System.out.println(Sender.getName() + " -> " + Recipient.getName() +  ", " + TransferAmount + ',' + " Credit, " + "transaction ID " + Identifier);
+//        } else {
+//            System.out.println(Sender.getName() + " -> " + Recipient.getName() + ", +" + TransferAmount + ',' + " Debit, " + "transaction ID " + Identifier);
+//        }
+//    }
+//
+//    public void printTransactionOne() {
+//            System.out.println("transaction ID " + Identifier);
+//
+//    }
+
 }

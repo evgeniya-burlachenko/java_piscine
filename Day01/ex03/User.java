@@ -1,13 +1,15 @@
-package ex00;
-
+package ex03;
 public class User {
+
     private int Identifier;
     private String Name;
     private int Balance;
+    private TransactionsLinkedList transactionsList;
 
-    public User(int identifier, String name, int balance) {
-        Identifier = identifier;
+    public User(String name, int balance) {
+        Identifier = UserIdsGenerator.getInstance().generateId();
         Name = name;
+        transactionsList = new TransactionsLinkedList();
         if (balance < 0) {
             System.out.println("error: balance cannot be negative. Set to 0 by default.");
             Balance = 0;
@@ -15,12 +17,8 @@ public class User {
             Balance = balance;
     }
 
-    public int getIdentifier() {
+    public int getId() {
         return Identifier;
-    }
-
-    public void setIdentifier(int identifier) {
-        Identifier = identifier;
     }
 
     public String getName() {
@@ -43,7 +41,12 @@ public class User {
             Balance = balance;
     }
 
-    public void printUser() {
-        System.out.println(Name + " [Identifier: " + Identifier + ", Name: " + Name + ", Balance: " + Balance + "]" + "\n");
+    public TransactionsLinkedList getTransactionsList() {
+        return transactionsList;
     }
+
+//    public void printTransactionList() {
+//        transactionsList.printTransactionList();
+//    }
+
 }
