@@ -41,11 +41,6 @@ public class Program {
             this.next = next;
             this.arr = arr;
         }
-//        private static synchronized void addToSum(int localSum, int from, int to) {
-//            System.out.println(Thread.currentThread().getName() +
-//                    ": from " + from + " to " + to + " sum is " + localSum);
-//            sumOfThreads += localSum;
-//        }
 
         public void run() {
             int i = first, j = next;
@@ -53,7 +48,7 @@ public class Program {
             for (; i < j; ++i) {
                 sum += arr[i];
             }
-            //addToSum(sum, first, next);
+            
             sumOfThreads += sum;
             System.out.println(
                     "Thread " + ++id + ": from " + first + " to " + (next - 1) + " sum is " + sum);
