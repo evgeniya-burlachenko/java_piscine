@@ -10,29 +10,33 @@ public class Program {
     }
     public static void printDiagram(int countOfWeek, long res) {
         int i = 1;
+
         long remainder = 1;
 
         for (int j = 1; j < countOfWeek - 1; ++j)
-            remainder = remainder * 10;//здесь будет самое большое число  - максимум с 18 нулями
+            remainder = remainder * 10;
 
         while (i < countOfWeek) {
-            //разбиваю res на десятки сотни и тд 1 2 3 4 5 6
             long sign = res / remainder;
             System.out.print("Week " + i + " ");
             for (int j = 0; j < sign; ++j)
-                System.out.print("=");//столько = сколько res
+                System.out.print("=");
             System.out.println(">");
-            res = res - sign * remainder; //сокращаю res на первую цифру
-            remainder /= 10;// убираю 1 ноль и запускаю цикл опять
+            res = res - sign * remainder;
+            remainder /= 10;
             i++;
         }
     }
 
     public static void main(String args[]) {
         int countOfWeek = 1;
+
         int countOfGrade = 1;
+
         int minNum = 0;
+
         long resultArray = 0;
+
         Scanner scanner = new Scanner(System.in);
 
         while (countOfWeek <= 18) {
@@ -41,21 +45,18 @@ public class Program {
                 printDiagram(countOfWeek, resultArray);
                 System.exit(0);
             }
-            //проверка week #
             if (!"Week".equals(s)) {
                 ErrorExit(scanner);
             }
-            //проверка что после week точно int
             if (!scanner.hasNextInt()) {
                 ErrorExit(scanner);
             }
             int tmp = scanner.nextInt();
-            if (countOfWeek != tmp) { ///проверка на порядок week 1  week 2 week 3 и тд
+            if (countOfWeek != tmp) {
                 ErrorExit(scanner);
             }
-            //проверка grade (от 1 до 9, 5 чисел)
             while (countOfGrade <= 5) {
-                if (!scanner.hasNextInt()) { //проверка на число
+                if (!scanner.hasNextInt()) {
                     ErrorExit(scanner);
                 }
                 int inputNum = scanner.nextInt();
@@ -64,7 +65,7 @@ public class Program {
                     minNum = inputNum;
                 }
                 else {
-                    if ( minNum > inputNum ) { //таким образом сюжа попадает только 1 grade - самый маленький
+                    if ( minNum > inputNum ) {
                         minNum = inputNum;
                     }
                 }

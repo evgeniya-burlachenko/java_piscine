@@ -1,5 +1,3 @@
-package ex01;
-
 
 public class Program {
     public static void printError() {
@@ -13,7 +11,6 @@ public class Program {
         if (1 != args.length || !args[0].startsWith("--count=")) {
             printError();
         }
-        //count = Integer.parseInt(args[0].substring(8));
         if (args[0].substring(8) != "") {
             count = Integer.parseInt(args[0].substring(8));
         }
@@ -24,12 +21,8 @@ public class Program {
         if (count < 1) {
             printError();
         }
-
-        // Object of a class that has both produce()
-        // and consume() methods
         final Producer pc = new Producer();
         int finalCount = count;
-        // Create producer thread
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run()
@@ -42,8 +35,6 @@ public class Program {
                 }
             }
         });
-
-        // Create consumer thread
         Thread t2 = new Thread(new Runnable() {
             @Override
             public void run()
@@ -56,13 +47,10 @@ public class Program {
                 }
             }
         });
-        // Start both threads
         t1.start();
         t2.start();
 
-        // t1 finishes before t2
         t1.join();
         t2.join();
-
     }
 }

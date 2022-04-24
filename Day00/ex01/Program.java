@@ -1,5 +1,3 @@
-package ex01;
-
 import java.util.Scanner;
 
 public class Program {
@@ -17,10 +15,9 @@ public class Program {
         else if(num == 2){
             System.out.println("true 0");
         }
+
         int iter = 1;
-        //num - считываю число
-        //i - иттерации до половины числа
-        //iter - кол-во итерраций
+
         for (int i = 2; i * i <= num; i++, iter++){
             if (0 == num % i) {
                 System.out.println("false " + iter);
@@ -28,10 +25,6 @@ public class Program {
             }
         }
         System.out.println("true " + iter);
-
         scanner.close();
-
     }
 }
-
-

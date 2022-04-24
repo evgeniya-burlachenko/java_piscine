@@ -1,4 +1,3 @@
-package ex00;
 import java.util.UUID;
 
 enum Category {
@@ -20,10 +19,10 @@ public class Transaction {
         TransferCategory = transferCategory;
 
         if (TransferCategory == Category.debit && transferAmount < 0) {
-            System.out.println("Debit (incoming transaction) can't be negative, set to 0 by default");
+            System.out.println("Error: debit can't be negative. Set to 0 by default");
             TransferAmount = 0;
         } else if (TransferCategory == Category.credit && transferAmount > 0) {
-            System.out.println("Credit (outgoing transaction) can't be positive, set 0 by default");
+            System.out.println("Error: credit can't be positive. Set 0 by default");
             TransferAmount = 0;
         }
         if (sender.getBalance() > transferAmount) {
@@ -67,16 +66,5 @@ public class Transaction {
 
     public int getTransferAmount() {
         return TransferAmount;
-    }
-
-    public void setTransferAmount(int transferAmount) {
-        if (TransferCategory == Category.debit && transferAmount < 0) {
-            System.out.println("Debit (incoming transaction) can't be negative, set to 0 by default");
-            TransferAmount = 0;
-        } else if (TransferCategory == Category.credit && transferAmount > 0) {
-            System.out.println("Credit (outgoing transaction) can't be positive, set 0 by default");
-            TransferAmount = 0;
-        } else
-            TransferAmount = transferAmount;
     }
 }

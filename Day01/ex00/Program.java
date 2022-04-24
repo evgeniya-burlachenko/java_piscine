@@ -1,5 +1,3 @@
-package ex00;
-
 public class Program {
 
     public static void main(String args[]) {
@@ -28,7 +26,7 @@ public class Program {
         System.out.println("Invalid transaction: ");
         Transaction invalid_debit = new Transaction(UserA, UserB, Category.debit,-1000);
         Transaction invalid_credit = new Transaction(UserB, UserA, Category.credit,50);
-        System.out.println("transfer amount: " + invalid_credit.getTransferAmount());
+        System.out.println("\n" + "transfer amount: " + invalid_credit.getTransferAmount());
         System.out.println("transfer amount: " + invalid_debit.getTransferAmount());
     }
 }

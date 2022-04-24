@@ -1,4 +1,3 @@
-package ex03;
 public class UserIdsGenerator {
     private static int Identifier = 0;
     private static UserIdsGenerator instance;

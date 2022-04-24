@@ -1,6 +1,5 @@
-package ex01;
 import java.util.LinkedList;
-//https://www.geeksforgeeks.org/producer-consumer-solution-using-threads-java/
+
 public class Producer extends  Thread {
 
     int flag = 0;
@@ -19,11 +18,6 @@ public class Producer extends  Thread {
         }
     }
 
-    // notifies the consumer thread that
-    // now it can start consuming
-
-
-    // Function called by consumer thread
     public void consume_hen(int count) throws InterruptedException {
         for (int i = 0; i < count; i++){
             synchronized (this) {

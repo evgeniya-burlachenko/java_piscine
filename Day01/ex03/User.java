@@ -1,4 +1,3 @@
-package ex03;
 public class User {
 
     private int Identifier;
@@ -11,7 +10,7 @@ public class User {
         Name = name;
         transactionsList = new TransactionsLinkedList();
         if (balance < 0) {
-            System.out.println("error: balance cannot be negative. Set to 0 by default.");
+            System.out.println("Error: balance cannot be negative. Set to 0 by default.");
             Balance = 0;
         } else
             Balance = balance;
@@ -35,7 +34,7 @@ public class User {
 
     public void setBalance(int balance) {
         if (balance < 0) {
-            System.out.println("error: balance cannot be negative. Set to 0 by default.");
+            System.out.println("Error: balance cannot be negative. Set to 0 by default.");
             Balance = 0;
         } else
             Balance = balance;
@@ -44,9 +43,4 @@ public class User {
     public TransactionsLinkedList getTransactionsList() {
         return transactionsList;
     }
-
-//    public void printTransactionList() {
-//        transactionsList.printTransactionList();
-//    }
-
 }

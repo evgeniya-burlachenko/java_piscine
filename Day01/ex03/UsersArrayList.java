@@ -1,4 +1,3 @@
-package ex03;
 public class UsersArrayList implements UsersList {
     private final int arraySize = 10;
     private int capacity = 10;

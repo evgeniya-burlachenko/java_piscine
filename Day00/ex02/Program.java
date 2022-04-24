@@ -1,9 +1,6 @@
-package ex02;
-
 import java.util.Scanner;
 
 public class Program {
-
     public static boolean isItPrime(int num) {
         for (int i = 2; i * i <= num; i++) {
             if (0 == num % i) {

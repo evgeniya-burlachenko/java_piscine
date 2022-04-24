@@ -1,6 +1,3 @@
-package ex02;
-
-
 public class User {
     private final int Identifier;
     private String Name;
@@ -34,7 +31,7 @@ public class User {
 
     public void setBalance(int balance) {
         if (balance < 0) {
-            System.out.println("error: balance cannot be negative. Set to 0 by default.");
+            System.out.println("Error: balance cannot be negative. Set to 0 by default.");
             Balance = 0;
         } else
             Balance = balance;

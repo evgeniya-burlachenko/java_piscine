@@ -1,5 +1,3 @@
-package ex00;
-
 public class newThreads extends Thread {
 
     int count = 0;

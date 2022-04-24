@@ -1,5 +1,3 @@
-package ex00;
-
 public class Program {
     public static void printError() {
         System.err.println("Usage: java Program --count=[count] && count positive");

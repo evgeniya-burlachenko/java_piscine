@@ -1,5 +1,3 @@
-package ex02;
-
 import java.util.Random;
 import java.util.Vector;
 
@@ -22,7 +20,6 @@ public class Program {
         public int getSumOfIntInArray() {
             return sumOfIntInArray;
         }
-
         public int[] getArr() {
             return arr;
         }
@@ -60,8 +57,8 @@ public class Program {
     }
 
     public static void main(String[] args)  {
-        int arrSize = 0; //длина массива
-        int threadsCount = 0;//колличество потоков
+        int arrSize = 0;
+        int threadsCount = 0;
         if (2 != args.length ||!args[0].startsWith("--arraySize=") ) {
             printError();
         }
@@ -87,8 +84,8 @@ public class Program {
 
         int arr[] = object.getArr();
 
-        int modulo = arrSize % threadsCount;//13 % 3 = 1
-        int addForNext = arrSize / threadsCount;//13/3 = 4
+        int modulo = arrSize % threadsCount;
+        int addForNext = arrSize / threadsCount;
 
         Vector<RealMultithreading> arrayOfThreads = new Vector<>();
 
@@ -96,10 +93,10 @@ public class Program {
             int first = 0, num = 0;
             for (; num < threadsCount - 1; first += addForNext, ++num) {
 
-                arrayOfThreads.add(new RealMultithreading(num, first, first + addForNext, arr));//int id, int first, int last, int[] arr
+                arrayOfThreads.add(new RealMultithreading(num, first, first + addForNext, arr));
             }
-            arrayOfThreads.add(new RealMultithreading(num, first, first + addForNext, arr));
-        } else {//12 % 2 = 0 12 / 2= 6
+            arrayOfThreads.add(new RealMultithreading(num, first, arrSize, arr));
+        } else {
 
             for (int first = 0, num = 0; num < threadsCount; first += addForNext, ++num) {
                 arrayOfThreads.add(new RealMultithreading(num, first, first + addForNext, arr));

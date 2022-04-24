@@ -1,5 +1,3 @@
-package ex02;
-
 public class Program {
     public static void main(String[] args) {
         try {
@@ -32,15 +30,15 @@ public class Program {
             ArrayList.addUser(UserM);
             System.out.println("Array size new :" + ArrayList.getArraySize());
             System.out.println("Retrieve Number : " + ArrayList.RetrieveNumberOfUsers());
-            System.out.println("Retrieve by ID(0), UserA: " + ArrayList.RetrieveUserById(0).getIdentifier());
-            System.out.println("Retrieve by ID(1), UserB: " + ArrayList.RetrieveUserById(1).getIdentifier());
-            System.out.println("Retrieve by index(0), UserA : " + ArrayList.RetrieveUserByIndex(0).getName());
-            System.out.println("Retrieve by index(1), UserB : " + ArrayList.RetrieveUserByIndex(1).getName());
-            System.out.println("Retrieve by index(2), UserC : " + ArrayList.RetrieveUserByIndex(2).getName());
-            System.out.println("Retrieve by ID ( not found) : " + ArrayList.RetrieveUserByIndex(100));
-            System.out.println("Retrieve by ID ( not found) : " + ArrayList.RetrieveUserById(100));
+            System.out.println("Retrieve by ID, UserA: " + ArrayList.RetrieveUserById(0).getIdentifier() + "; index = " + ArrayList.RetrieveUserByIndex(0));
+            System.out.println("Retrieve by ID, UserB: " + ArrayList.RetrieveUserById(1).getIdentifier()+ "; index = " + ArrayList.RetrieveUserByIndex(1));
+            System.out.println("Retrieve by index, UserA : " + ArrayList.RetrieveUserByIndex(0).getName()+ ", id = "+ ArrayList.RetrieveUserById(0).getIdentifier() );
+            System.out.println("Retrieve by index, UserB : " + ArrayList.RetrieveUserByIndex(1).getName() + ", id = "+ ArrayList.RetrieveUserById(1).getIdentifier());
+            System.out.println("Retrieve by index, UserC : " + ArrayList.RetrieveUserByIndex(2).getName() + ", id = "+ ArrayList.RetrieveUserById(2).getIdentifier());
+           	System.out.println("Retrieve by ID ( not found) : " + ArrayList.RetrieveUserById(100));
         } catch (UserNotFoundException e) {
            System.out.println("ID or index not found!");
         }
     }
 }
+
