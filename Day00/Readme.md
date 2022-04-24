@@ -293,4 +293,4 @@ Each application operation stage is divided by "." (period). Absolute correctnes
 
 Example of program operation:
 
-![program](misc/images/program.png)
+![program](https://github.com/evgeniya-burlachenko/java_piscine/tree/master/Day00/misc/program.png)
