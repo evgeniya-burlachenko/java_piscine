@@ -6,11 +6,11 @@ A 14-day long intensive course covering topics from Java Core (including, Reflec
 Each repository contains day's subject and checklist.
 
 ### Days (individual projects)
-* [Day 00: Structures and arrays](https://github.com/evgeniya-burlachenko/Day00)
-* [Day 01: OOP and Collections](https://github.com/evgeniya-burlachenko/Day01)
-* [Day 02: IO and Files](https://github.com/evgeniya-burlachenko/Day02)
-* [Day 03: Threads](https://github.com/evgeniya-burlachenko/Day03)
-* [Day 04: JAR](https://github.com/evgeniya-burlachenko/Day04)
+* [Day 00: Structures and arrays](https://github.com/evgeniya-burlachenko/java_piscine/tree/master/Day00)
+* [Day 01: OOP and Collections](https://github.com/evgeniya-burlachenko/java_piscine/tree/master/Day01)
+* [Day 02: IO and Files](https://github.com/evgeniya-burlachenko/java_piscine/tree/master/Day02)
+* [Day 03: Threads](https://github.com/evgeniya-burlachenko/java_piscine/tree/master/Day03)
+* [Day 04: JAR](https://github.com/evgeniya-burlachenko/java_piscine/tree/master/Day04)
 * [Day 05: SQL and JDBC](https://github.com/evgeniya-burlachenko/Day05)
 <!-- * [Day 06: JUnit and Mockito](https://github.com/evgeniya-burlachenko/java_day06)
 * [Day 07: Reflection](https://github.com/evgeniya-burlachenko/java_day07)
