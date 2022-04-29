@@ -1,0 +1,7 @@
+/Users/evgeniyaburlachenko/IdeaProjects/java_piscine/Day05/ex03/Chat/src/main/java/edu/school21/chat/repositories/MessagesRepository.java
+/Users/evgeniyaburlachenko/IdeaProjects/java_piscine/Day05/ex03/Chat/src/main/java/edu/school21/chat/exception/NotSavedSubEntityException.java
+/Users/evgeniyaburlachenko/IdeaProjects/java_piscine/Day05/ex03/Chat/src/main/java/edu/school21/chat/models/User.java
+/Users/evgeniyaburlachenko/IdeaProjects/java_piscine/Day05/ex03/Chat/src/main/java/edu/school21/chat/repositories/MessagesRepositoryJdbcImpl.java
+/Users/evgeniyaburlachenko/IdeaProjects/java_piscine/Day05/ex03/Chat/src/main/java/edu/school21/chat/models/Chatroom.java
+/Users/evgeniyaburlachenko/IdeaProjects/java_piscine/Day05/ex03/Chat/src/main/java/edu/school21/chat/app/Program.java
+/Users/evgeniyaburlachenko/IdeaProjects/java_piscine/Day05/ex03/Chat/src/main/java/edu/school21/chat/models/Message.java
